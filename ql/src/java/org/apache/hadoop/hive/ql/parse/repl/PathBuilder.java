@@ -28,7 +28,7 @@ import java.util.ArrayList;
 
 /**
  * Path builder to stitch together paths with different components might be useful as utils across
- * replication semantic analyzer atleast.
+ * replication semantic analyzer at least.
  */
 public class PathBuilder {
   private ArrayList<String> descendants = new ArrayList<>();

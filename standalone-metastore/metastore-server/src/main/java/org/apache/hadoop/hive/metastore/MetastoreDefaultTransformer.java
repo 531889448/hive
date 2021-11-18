@@ -392,7 +392,7 @@ public class MetastoreDefaultTransformer implements IMetaStoreMetadataTransforme
               LOG.info("Table is FULLACID");
               if (processorCapabilities.containsAll(getWrites(requiredCapabilities)) // contains all writes on table
                   || processorCapabilities.contains(HIVEFULLACIDWRITE)) {
-                LOG.info("Processor has all writes or atleast " + HIVEFULLACIDWRITE + ", access is RW");
+                LOG.info("Processor has all writes or at least " + HIVEFULLACIDWRITE + ", access is RW");
                 table.setAccessType(ACCESSTYPE_READWRITE); // clients have RW access to ACID tables
                 hintList.add(HIVEFULLACIDWRITE);
                 ret.put(table, hintList);
@@ -815,7 +815,7 @@ public class MetastoreDefaultTransformer implements IMetaStoreMetadataTransforme
       if (FileUtils.isSubdirectory(whRootPath.toString(), locationPath.toString()) || locationPath.equals(whRootPath)) { // legacy path
         if (processorCapabilities != null && (processorCapabilities.contains(HIVEMANAGEDINSERTWRITE) ||
             processorCapabilities.contains(HIVEFULLACIDWRITE))) {
-          LOG.debug("Processor has atleast one of ACID write capabilities, setting current locationUri " + db.getLocationUri() + " as managedLocationUri");
+          LOG.debug("Processor has at least one of ACID write capabilities, setting current locationUri " + db.getLocationUri() + " as managedLocationUri");
           db.setManagedLocationUri(new Path(db.getLocationUri()).toString());
         }
         Path extWhLocation = hmsHandler.getWh().getDefaultExternalDatabasePath(db.getName());

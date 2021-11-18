@@ -1176,7 +1176,7 @@ import com.google.common.annotations.VisibleForTesting;
     }
 
     List<ExprNodeDesc> childrenWithCasts = new ArrayList<>();
-    boolean atleastOneCastNeeded = false;
+    boolean at leastOneCastNeeded = false;
     if (genericUDF instanceof GenericUDFElt) {
       int i = 0;
       for (ExprNodeDesc child : children) {
@@ -1186,7 +1186,7 @@ import com.google.common.annotations.VisibleForTesting;
         }
         ExprNodeDesc castExpression = getImplicitCastExpression(genericUDF, child, castType);
         if (castExpression != null) {
-          atleastOneCastNeeded = true;
+          at leastOneCastNeeded = true;
           childrenWithCasts.add(castExpression);
         } else {
           childrenWithCasts.add(child);
@@ -1207,12 +1207,12 @@ import com.google.common.annotations.VisibleForTesting;
           // Don't cast NULL using ConstantValueExpression but replace the NULL expression with the
           // desired type set. This lets the doGetIfExpression logic use IfExprCondExprNull, etc.
           childrenWithCasts.add(new ExprNodeConstantDesc(commonType, null));
-          atleastOneCastNeeded = true;
+          at leastOneCastNeeded = true;
           continue;
         }
         ExprNodeDesc castExpression = getImplicitCastExpression(genericUDF, child, commonType);
         if (castExpression != null) {
-          atleastOneCastNeeded = true;
+          at leastOneCastNeeded = true;
           childrenWithCasts.add(castExpression);
         } else {
           childrenWithCasts.add(child);
@@ -1229,7 +1229,7 @@ import com.google.common.annotations.VisibleForTesting;
           castExpression = getImplicitCastExpression(genericUDF, children.get(i), commonType);
         }
         if (castExpression != null) {
-          atleastOneCastNeeded = true;
+          at leastOneCastNeeded = true;
           childrenWithCasts.add(castExpression);
         } else {
           childrenWithCasts.add(children.get(i));
@@ -1239,14 +1239,14 @@ import com.google.common.annotations.VisibleForTesting;
       for (ExprNodeDesc child : children) {
         ExprNodeDesc castExpression = getImplicitCastExpression(genericUDF, child, commonType);
         if (castExpression != null) {
-          atleastOneCastNeeded = true;
+          at leastOneCastNeeded = true;
           childrenWithCasts.add(castExpression);
         } else {
           childrenWithCasts.add(child);
         }
       }
     }
-    if (atleastOneCastNeeded) {
+    if (at leastOneCastNeeded) {
       return childrenWithCasts;
     } else {
       return children;

@@ -143,7 +143,7 @@ public class ReplDumpWork implements Serializable {
 
   // Override any user specification that changes the last event to be dumped.
   void overrideLastEventToDump(Hive fromDb, long bootstrapLastId, long failoverEventId) throws Exception {
-    // If we are bootstrapping ACID tables, we need to dump all the events upto the event id at
+    // If we are bootstrapping ACID tables, we need to dump all the events up to the event id at
     // the beginning of the bootstrap dump and also not dump any event after that. So we override
     // both, the last event as well as any user specified limit on the number of events. See
     // bootstrampDump() for more details.

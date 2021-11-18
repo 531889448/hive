@@ -109,7 +109,7 @@ from T1_v where T1_v.key not in (select T2_v.key from T2_v);
 select * 
 from T1_v where T1_v.key not in (select T2_v.key from T2_v);
 
---where has multiple conjuction
+--where has multiple conjunction
 explain select * from part where p_brand <> 'Brand#14' AND p_size NOT IN (select (p_size*p_size) from part p where p.p_type = part.p_type ) AND p_size <> 340;
 select * from part where p_brand <> 'Brand#14' AND p_size NOT IN (select (p_size*p_size) from part p where p.p_type = part.p_type ) AND p_size <> 340;
 

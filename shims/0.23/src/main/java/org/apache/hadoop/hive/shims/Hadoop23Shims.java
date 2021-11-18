@@ -1279,7 +1279,7 @@ public class Hadoop23Shims extends HadoopShimsSecure {
   }
 
   /**
-   * Checks wether reverse diff on the snapshot should be performed or not.
+   * Checks whether reverse diff on the snapshot should be performed or not.
    * @param p path where snapshot exists.
    * @param conf the hive configuration.
    * @param snapshot the name of snapshot.

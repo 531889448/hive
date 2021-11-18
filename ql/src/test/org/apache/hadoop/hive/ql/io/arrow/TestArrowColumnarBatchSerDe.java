@@ -589,7 +589,7 @@ public class TestArrowColumnarBatchSerDe {
     String[][] schema = {
         {"timestamp1", "timestamp"},
     };
-    //Nanos precise upto 6 digits
+    //Nanos precise up to 6 digits
     Object[][] tsRows = new Object[][]{
         {new TimestampWritableV2(Timestamp.valueOf("1800-04-01 09:01:10.123999"))},
         {new TimestampWritableV2(Timestamp.valueOf("2050-04-01 09:01:10.999999"))},

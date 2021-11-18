@@ -173,7 +173,7 @@ sub runTest
            }
            my $stores = $self->countStores($testCmd);
 
-           my $id = 0; # regular ouput count
+           my $id = 0; # regular output count
            for (my $i = 0; $i < @results; $i++) {
                if ($results[$i] ne '?') {
 	           my %modifiedTestCmd = %{$testCmd};
@@ -858,7 +858,7 @@ sub wrongExecutionMode($$)
 #  Sub: printGroupResultsXml
 #  Print the results for the group using junit xml schema using values from the testStatuses hash.
 #
-# Paramaters:
+# Parameters:
 # $report       - the report object to use to generate the report
 # $groupName    - the name of the group to report totals for
 # $testStatuses - the hash containing the results for the tests run so far

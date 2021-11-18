@@ -327,7 +327,7 @@ public class Executor {
   }
 
   private void launchTasks(boolean noName, int jobCount, String jobName) throws HiveException {
-    // Launch upto maxthreads tasks
+    // Launch up to maxthreads tasks
     Task<?> task;
     int maxthreads = HiveConf.getIntVar(driverContext.getConf(), HiveConf.ConfVars.EXECPARALLETHREADNUMBER);
     while ((task = taskQueue.getRunnable(maxthreads)) != null) {

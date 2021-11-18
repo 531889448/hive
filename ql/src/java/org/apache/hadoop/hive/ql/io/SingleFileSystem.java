@@ -50,7 +50,7 @@ import org.apache.hadoop.util.Progressable;
  */
 /*
  * Thru out this file there are paths of both the overlay filesystem and the underlying fs.
- * To avoid confusion between these path types - all paths which are in the overlay fs are refered
+ * To avoid confusion between these path types - all paths which are in the overlay fs are referred
  * with the upper keyword - and paths on the underlying fs are identified with the lower keyword.
  *
  *  For example:

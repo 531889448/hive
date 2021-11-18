@@ -339,8 +339,8 @@ public class TezCompiler extends TaskCompiler {
     } else if (victimAM == null) {
       // do nothing
     } else {
-      // Cycle consists of atleast one dynamic partition pruning(DPP)
-      // optimization and atleast one min/max optimization.
+      // Cycle consists of at least one dynamic partition pruning(DPP)
+      // optimization and at least one min/max optimization.
       // DPP is a better optimization unless it ends up scanning the
       // bigger table for keys instead of the smaller table.
 

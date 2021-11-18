@@ -1,7 +1,7 @@
 --! qt:dataset:src
 set hive.stats.autogather=false;
 
--- Explictily DROP vs. CREATE IF NOT EXISTS to ensure stats are not carried over
+-- Explicitily DROP vs. CREATE IF NOT EXISTS to ensure stats are not carried over
 DROP TABLE IF EXISTS missing_stats_t1;
 DROP TABLE IF EXISTS missing_stats_t2;
 DROP TABLE IF EXISTS missing_stats_t3;
