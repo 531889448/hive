@@ -191,7 +191,7 @@ import static org.apache.hadoop.hive.conf.HiveConf.ConfVars.*;
  * -- A boolean field indicating whether or not the file is block compressed.
  * -- This field is *always* false. According to comments in the original
  * -- RCFile implementation this field was retained for backwards
- * -- compatability with the SequenceFile format.
+ * -- compatibility with the SequenceFile format.
  *
  * file-is-block-compressed ::= Byte[1] {false}
  *
@@ -1095,7 +1095,7 @@ public class RCFile {
      * Append a row of values. Currently it only can accept &lt;
      * {@link BytesRefArrayWritable}. If its <code>size()</code> is less than the
      * column number in the file, zero bytes are appended for the empty columns.
-     * If its size() is greater then the column number in the file, the exceeded
+     * If its size() is greater than the column number in the file, the exceeded
      * columns' bytes are ignored.
      *
      * @param val a BytesRefArrayWritable with the list of serialized columns

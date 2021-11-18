@@ -123,7 +123,7 @@ public class OpTraitsRulesProcFactory {
                 if (!isKey) {
                   continue;
                 }
-                // Fetch the column expression. There should be atleast one.
+                // Fetch the column expression. There should be at least one.
                 Multimap<Integer, ExprNodeColumnDesc> colMap = ArrayListMultimap.create();
                 boolean found = false;
                 ExprNodeDescUtils.getExprNodeColumnDesc(entry.getValue(), colMap);
@@ -351,7 +351,7 @@ public class OpTraitsRulesProcFactory {
           }
         }
         if (!processSortCols && !found) {
-          // While processing bucket columns, atleast one bucket column
+          // While processing bucket columns, at least one bucket column
           // missed. This results in a different bucketing scheme.
           // Add empty list
           listBucketCols.add(new ArrayList<>());

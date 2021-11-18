@@ -607,7 +607,7 @@ public class HiveConf extends Configuration {
         + "requirements can be fulfilled. If any specific configuration needs to be passed for these copy task it can"
         + " be specified using the prefix hive.dbpath."),
     REPL_EXTERNAL_WAREHOUSE_SINGLE_COPY_TASK_PATHS("hive.repl.external.warehouse.single.copy.task.paths",
-        "", "Comma seperated list of paths for which single copy task shall be created for all the external tables "
+        "", "Comma separated list of paths for which single copy task shall be created for all the external tables "
         + "within the locations Would require more memory for preparing the initial listing, Should be used if the memory "
         + "requirements can be fulfilled. If the directory contains data not part of the database, that data would "
         + "also get copied, so only locations which contains tables only belonging to the same database should be "
@@ -650,7 +650,7 @@ public class HiveConf extends Configuration {
             "Name of the source cluster for the replication."),
     REPL_TARGET_CLUSTER_NAME("hive.repl.target.cluster.name", null,
             "Name of the target cluster for the replication."),
-    REPL_RETRY_INTIAL_DELAY("hive.repl.retry.initial.delay", "60s",
+    REPL_RETRY_INITIAL_DELAY("hive.repl.retry.initial.delay", "60s",
       new TimeValidator(TimeUnit.SECONDS),
       "Initial Delay before retry starts."),
     REPL_RETRY_BACKOFF_COEFFICIENT("hive.repl.retry.backoff.coefficient", 1.2f,
@@ -4674,7 +4674,7 @@ public class HiveConf extends Configuration {
             + " 1: recommended value: there is only 1 merger thread (additionally to the task's main thread),"
             + "according perf tests, this can lead to serious improvement \n"),
     TEZ_BIGTABLE_MIN_SIZE_SEMIJOIN_REDUCTION("hive.tez.bigtable.minsize.semijoin.reduction", 100000000L,
-            "Big table for runtime filteting should be of atleast this size"),
+            "Big table for runtime filteting should be of at least this size"),
     TEZ_DYNAMIC_SEMIJOIN_REDUCTION_THRESHOLD("hive.tez.dynamic.semijoin.reduction.threshold", (float) 0.50,
             "Only perform semijoin optimization if the estimated benefit at or above this fraction of the target table"),
     TEZ_DYNAMIC_SEMIJOIN_REDUCTION_MULTICOLUMN(

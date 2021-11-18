@@ -43,7 +43,7 @@ ALTER TABLE SDS
  * Migrate the TBLS table
  * Add entries into CDS.
  * Populate the CD_ID field in SDS for tables
- * Add entires to COLUMNS_V2 based on this table's sd's columns
+ * Add entries to COLUMNS_V2 based on this table's sd's columns
  */ 
 
 /* In the migration, there is a 1:1 mapping between CD_ID and SD_ID

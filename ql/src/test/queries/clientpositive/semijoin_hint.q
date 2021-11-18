@@ -43,7 +43,7 @@ create table srccc as select * from src;
 
 set hive.cbo.returnpath.hiveop=true;
 
--- disabling this test case for returnpath true as the aliases in case of union are mangled due to which hints are not excercised.
+-- disabling this test case for returnpath true as the aliases in case of union are mangled due to which hints are not exercised.
 --explain select /*+ semi(k, str, 5000)*/ count(*) from srcpart_date k join srcpart_small s on (k.str = s.key1)
 --        union all
 --        select /*+ semi(v, key1, 5000)*/ count(*) from srcpart_date d join srcpart_small v on (d.str = v.key1);

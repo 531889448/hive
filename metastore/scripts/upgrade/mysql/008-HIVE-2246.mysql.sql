@@ -104,7 +104,7 @@ CREATE PROCEDURE PRE_MIGRATE()
  * Migrate the TBLS table
  * Add entries into CDS.
  * Populate the CD_ID field in SDS for tables
- * Add entires to COLUMNS_V2 based on this table's sd's columns
+ * Add entries to COLUMNS_V2 based on this table's sd's columns
  */
 CREATE PROCEDURE MIGRATE_TABLES()
   BEGIN

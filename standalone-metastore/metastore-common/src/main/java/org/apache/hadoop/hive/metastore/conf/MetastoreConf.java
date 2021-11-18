@@ -1090,7 +1090,7 @@ public class MetastoreConf {
     METASTORE_METADATA_TRANSFORMER_TRANSLATED_TO_EXTERNAL_FOLLOWS_RENAMES(
         "metastore.metadata.transformer.translated.to.external.follows.renames",
         "metastore.metadata.transformer.translated.to.external.follows.renames", true,
-        "Wether TRANSLATED_TO_EXTERNAL tables should follow renames. In case the default directory exists "
+        "Whether TRANSLATED_TO_EXTERNAL tables should follow renames. In case the default directory exists "
             + "the strategy of metastore.metadata.transformer.location.mode is used"),
     METASTORE_METADATA_TRANSFORMER_LOCATION_MODE("metastore.metadata.transformer.location.mode",
         "metastore.metadata.transformer.location.mode", "force",

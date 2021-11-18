@@ -207,29 +207,29 @@ fi
 
 
 FCOUNT=0
-# function to count the number of occurances of a string within another string
-num_occurances() {
+# function to count the number of occurrences of a string within another string
+num_occurrences() {
   fulltext="$1"
   searchChars="$2"
   FCOUNT=0
-  debug "[num_occurances] Search params $fulltext:$searchChars"
+  debug "[num_occurrences] Search params $fulltext:$searchChars"
   FCOUNT=$(grep -o "$searchChars" <<< "$fulltext" | wc -l)
-  debug "[num_occurances] Returning $FCOUNT"
+  debug "[num_occurrences] Returning $FCOUNT"
 }
 
 # self test to ensure function is working as expected.
 str1="( INTEGER ())) NOT NULL )"
-num_occurances "$str1" "("
+num_occurrences "$str1" "("
 if [[ $FCOUNT -eq 2 ]]
 then
-  num_occurances "$str1" ")"
+  num_occurrences "$str1" ")"
   if [[ $FCOUNT -ne 4 ]]
   then
-    CONSOLE "num_occurances self-test failed"
+    CONSOLE "num_occurrences self-test failed"
     exit 1
   fi
 else
-  CONSOLE "num_occurances self-test failed"
+  CONSOLE "num_occurrences self-test failed"
   exit 1
 fi
 
@@ -324,7 +324,7 @@ firstValue() {
 # arg1 is name of the map to retrieve from.
 # arg2 key to be found in the map.
 containsKey() {
-  # find a line that contains the key value at the begining of line.
+  # find a line that contains the key value at the beginning of line.
   ret=$(grep "^$2=" /tmp/hashmap.$1 | cut -d'=' -f1)
   if [[ "$2" = "$ret" ]]
   then
@@ -647,7 +647,7 @@ parse_schema() {
       fi
 
       #if [[ "$copy" =~ "(" ]]
-      num_occurances "$copy" "("
+      num_occurrences "$copy" "("
       if [[ $FCOUNT -gt 0 ]]
       then
         COUNTER=$((COUNTER+FCOUNT))
@@ -655,7 +655,7 @@ parse_schema() {
       fi
 
       #if [[ "$copy" =~ ")" ]]
-      num_occurances "$copy" ")"
+      num_occurrences "$copy" ")"
       if [[ $FCOUNT -gt 0 ]]
       then
         if [[ "$COUNTER" -gt 1 ]]
@@ -688,9 +688,9 @@ parse_schema() {
         debug "[parse_schema] OPEN FOUND $line"
         TABLE_DEF="$line"
 
-        num_occurances "$copy" ")"
+        num_occurrences "$copy" ")"
         local closeCount=$FCOUNT
-        num_occurances "$copy" "("
+        num_occurrences "$copy" "("
         local openCount=$FCOUNT
         debug "[parse_schema] matches $openCount $closeCount"
         if [ "$openCount" -eq "$closeCount" ] && [ "$openCount" -gt 0 ]

@@ -141,7 +141,7 @@ public class TestHCatSchema {
     fieldSchemaList.add(memberSalaryField);
     HCatSchema schema = new HCatSchema(fieldSchemaList);
     schema.remove(locationField);
-    assertTrue("The position of atleast one of the fields is incorrect" ,
+    assertTrue("The position of at least one of the fields is incorrect" ,
         schema.getPosition(memberIDField.getName()) == 0 &&
         schema.getPosition(locationField.getName()) == null &&
         schema.getPosition(memberNameField.getName()) == 1 &&

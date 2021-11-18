@@ -682,7 +682,7 @@ public class LlapTaskCommunicator extends TezTaskCommunicatorImpl {
           @Override
           public void indicateError(Throwable t) {
 
-            // Re-attempts are left upto the RPC layer. If there's a failure reported after this,
+            // Re-attempts are left up to the RPC layer. If there's a failure reported after this,
             // mark all attempts running on this node as KILLED. The node itself cannot be killed from
             // here, that's only possible via the scheduler.
             // The assumption is that if there's a failure to communicate with the node - it will

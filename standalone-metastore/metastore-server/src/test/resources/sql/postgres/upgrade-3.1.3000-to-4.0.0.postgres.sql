@@ -48,7 +48,7 @@ CREATE TABLE "REPLICATION_METRICS" (
     PRIMARY KEY("RM_SCHEDULED_EXECUTION_ID")
     );
 
---Increase the size of RM_PROGRESS to accomodate the replication statistics
+--Increase the size of RM_PROGRESS to accommodate the replication statistics
 ALTER TABLE "REPLICATION_METRICS" ALTER "RM_PROGRESS" TYPE varchar(24000);
 
 ALTER TABLE "REPLICATION_METRICS" ALTER "RM_PROGRESS" TYPE varchar(10000);

@@ -206,13 +206,13 @@ public class PartitionColumnsSeparator extends Transform {
 
     /**
      * Check if the expression node satisfies the following :
-     * Has atleast one subexpression containing a partition/virtualcolumn and has
+     * Has at least one subexpression containing a partition/virtualcolumn and has
      * exactly refer to a single table alias.
      * @param en Expression Node Descriptor
-     * @return true if there is atleast one subexpression with partition/virtual column
+     * @return true if there is at least one subexpression with partition/virtual column
      * and has exactly refer to a single table alias. If not, return false.
      */
-    private boolean hasAtleastOneSubExprWithPartColOrVirtualColWithOneTableAlias(ExprNodeDesc en) {
+    private boolean hasAt leastOneSubExprWithPartColOrVirtualColWithOneTableAlias(ExprNodeDesc en) {
       if (en == null || en.getChildren() == null) {
         return false;
       }
@@ -362,12 +362,12 @@ public class PartitionColumnsSeparator extends Transform {
         return null;
       }
 
-      // 3. See if the IN (STRUCT(EXP1, EXP2,..) has atleast one expression with partition
+      // 3. See if the IN (STRUCT(EXP1, EXP2,..) has at least one expression with partition
       // column with single table alias. If not bail out.
       // We might have expressions containing only partitioning columns, say, T1.A + T2.B
       // where T1.A and T2.B are both partitioning columns.
       // However, these expressions should not be considered as valid expressions for separation.
-      if (!hasAtleastOneSubExprWithPartColOrVirtualColWithOneTableAlias(children.get(0))) {
+      if (!hasAt leastOneSubExprWithPartColOrVirtualColWithOneTableAlias(children.get(0))) {
         LOG.debug(
             "Partition columns not separated for {}, there are no expression containing partition columns in struct fields",
             fd);

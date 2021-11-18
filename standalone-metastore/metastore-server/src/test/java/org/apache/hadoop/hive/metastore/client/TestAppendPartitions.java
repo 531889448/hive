@@ -615,7 +615,7 @@ public class TestAppendPartitions extends MetaStoreClientTest {
     Assert.assertEquals(expectedPartValues, partition.getValues());
     Assert.assertNotEquals(0, partition.getCreateTime());
     Assert.assertEquals(0, partition.getLastAccessTime());
-    Assert.assertTrue("Expect atleast transient_lastDdlTime to be set in params", (partition.getParameters().size() > 0));
+    Assert.assertTrue("Expect at least transient_lastDdlTime to be set in params", (partition.getParameters().size() > 0));
     Assert.assertTrue(partition.getParameters().containsKey("transient_lastDdlTime"));
     StorageDescriptor partitionSD = partition.getSd();
     Assert.assertEquals(table.getSd().getLocation() + "/" + partitionName,

@@ -155,7 +155,7 @@ explain select sum(l_extendedprice) from lineitem, part where p_partkey = l_part
 select sum(l_extendedprice) from lineitem, part where p_partkey = l_partkey and l_quantity IN (select avg(l_quantity) from lineitem where l_partkey = p_partkey);
 
 
---where has multiple conjuction
+--where has multiple conjunction
 explain select * from part where p_brand <> 'Brand#14' AND p_size IN (select (p_size) from part p where p.p_type = part.p_type group by p_size) AND p_size <> 340;
 select * from part where p_brand <> 'Brand#14' AND p_size IN (select (p_size) from part p where p.p_type = part.p_type group by p_size) AND p_size <> 340;
 

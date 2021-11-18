@@ -209,7 +209,7 @@ public final class MapJoinFactory {
       ctx.setCurrTask(currTask);
 
       // If we are seeing this mapjoin for the first time, initialize the plan.
-      // If we are seeing this mapjoin for the second or later time then atleast one of the
+      // If we are seeing this mapjoin for the second or later time then at least one of the
       // branches for this mapjoin have been encounered. Join the plan with the plan created
       // the first time.
       boolean local = pos != mapJoin.getConf().getPosBigTable();

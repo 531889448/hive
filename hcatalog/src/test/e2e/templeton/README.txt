@@ -137,7 +137,7 @@ Running the tests
 Use the following command to run tests -
 
 ant test -Dinpdir.hdfs=<location of inpdir on hdfs>  -Dtest.user.name=<user the tests should run as> \
- -Dsecure.mode=<yes/no>   -Dharness.webhdfs.url=<webhdfs url upto port num>  -Dharness.templeton.url=<templeton url upto port num> 
+ -Dsecure.mode=<yes/no>   -Dharness.webhdfs.url=<webhdfs url up to port num>  -Dharness.templeton.url=<templeton url up to port num> 
 
 If you want to run specific test group you can specify the group, for example:  -Dtests.to.run='-t TestHive'
 
@@ -154,7 +154,7 @@ ant test-multi-users -Dkeytab.dir=<keytab files dir>
   -Dsecure.mode=<yes/no>  -Dtest.group.name=<common group> -Dinpdir.hdfs=<location of inpdir on hdfs>  
   -Dtest.user.name=<user 1 belonging to common group> -Dtest.group.user.name=<user 2 belonging to common group>  
   -Dtest.other.user.name=<user 3 who does not belong to common group> 
-  -Dharness.webhdfs.url=<webhdfs url upto port num>  -Dharness.templeton.url=<templeton url upto port num> 
+  -Dharness.webhdfs.url=<webhdfs url up to port num>  -Dharness.templeton.url=<templeton url up to port num> 
 
 The <keytab files dir> is expected to have keytab filenames of the form - user_name.*keytab .
 
@@ -188,7 +188,7 @@ Running Sqoop jobsubmission tests (This test is targeted on Sqoop1. The test wil
 ---------------------------------
 ant clean test -Dinpdir.hdfs=<location of inpdir on hdfs> -Ddb.connection.string=<jdbc connection string>
     -Ddb.user.name=<DBUserName> -Ddb.password=<DBPassWord> -Dtest.user.name=<user the tests should run as>
-    -Dharness.webhdfs.url=<webhdfs url upto port num> -Dharness.templeton.url=<templeton url upto port num>
+    -Dharness.webhdfs.url=<webhdfs url up to port num> -Dharness.templeton.url=<templeton url up to port num>
     -Dtests.to.run=-t TestSqoop
 
 In order to run Sqoop jobsubmission tests, a RDBMS like MySQL or SQL server should be installed. Also since
@@ -208,7 +208,7 @@ and the folder hdfs://hostname:8020/sqoopoutputdir doesn't exist before running 
 Running updateConfig tests
 --------------------------
 ant test-updateConfig -Dinpdir.hdfs=<location of inpdir on hdfs>  -Dtest.user.name=<user the tests should run as> \
- -Dsecure.mode=<yes/no>   -Dharness.webhdfs.url=<webhdfs url upto port num>  -Dharness.templeton.url=<templeton url upto port num>
+ -Dsecure.mode=<yes/no>   -Dharness.webhdfs.url=<webhdfs url up to port num>  -Dharness.templeton.url=<templeton url up to port num>
 
 This test suite is trying to verify the use of property templeton.mapper.memory.mb in webhcat-site.xml.
 For this, an attempt is made to load data of size greater than 100MB, from one hive table to another hive table,
